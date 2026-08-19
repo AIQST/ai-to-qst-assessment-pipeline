@@ -1,0 +1,52 @@
+Importing Text files:
+
+Multiple choice - single answer questions (15 answers max.), Multiple choice - many answers, EQ,
+Short Answer and Paragraph questions may be imported.
+
+** The Explanations and Memory to the questions will be imported also.
+
+Make sure you put QST (with a space after it) as the first word at the beginning of each question.
+There is no need to number the questions
+Each answer should have )@ at the beginng of the line with each answer,
+ example:
+   )@  answer
+   
+Each correct answer should have ** as the first letters of the answer.
+If no correct answers are indicated, the first answer will be set as correct.
+
+The character combinations )@ and ** and QST should not be used in any questions or answers as they are special character in the import format.
+
+Check your questions after you have uploaded them for any issues.
+
+An example of Multiple Choice:
+QST  What is the bird below?
+)@   robin
+)@   duck
+)@   pigeon
+)@   ** pheasant
+
+An example of Many Answers: 
+QST Select all the cities that are within Alberta.
+)@ **Calgary
+)@ Winnipeg
+)@ **Red Deer
+)@ **Edmonton
+)@ Victoria
+)@ Toronto
+
+An example of Short Answer: 
+QST Who invented the theory of relativity?
+)@ **Albert Einstein
+
+An example of Paragraph: 
+QST Why is the sky blue?
+)@ **Because of the refraction of the light as it is passing through the atmosphere.
+
+An example of including Explanation and Memory in Text question: 
+QST Who did not go along for the ride?
+)@ Dave
+)@ Bill
+)@ Kristin
+)@ ** Donna
+%EXPLAN% Donna's name was never mentioned.
+%MEMORY% Dave, Bill, Don and Kristin went for a drive in the country and saw cows, sheep and a horse.
