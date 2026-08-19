@@ -1,0 +1,101 @@
+Example of QST XML file:
+
+<?xml version="1.0" ?>
+<item>
+<type>MC</type>
+<mode>1</mode>
+<sub_type>1</sub_type>
+<ans_mode>0</ans_mode>
+<value>1</value>
+<descrip>What is the bird</descrip>
+<explanimage_name>pheasant_bird.jpg</explanimage_name>
+<explanimage>Base 64 encoded image here - left out for this example
+</explanimage>
+<explanation><p>A pheasant has a colored band around it’s neck</p></explanation>
+<mem_image_name>mikki_2_2_3.jpg</mem_image_name>
+<mem_image>Base 64 encoded image here - left out for this example
+</mem_image>
+<memory>Look at the image <p><img style="vertical-align:middle; width: 134px;" 
+src="/schools/qst_files/pheasant.jpg" alt=”A picture of a bird.”>then click 
+Continue.
+</memory>
+<qimage_name>pheasant.jpg</qimage_name>
+<qimage> Base 64 encoded image here - left out for this example
+</qimage>
+<question><p><span style="font-size: 16px;">What is the bird shown 
+below?</span></p><p><img style="vertical-align:middle; width: 134px;" 
+src="/schools/qst_files/pheasant.jpg" alt=”A picture of a bird.”><span style="font
+size: 16px;"><br></span><br></p></question>
+<vlink>0</vlink>
+<alink>0</alink>
+<kolum>1</kolum>
+<answers>
+<c_answer>0</c_answer>
+<answer>robin</answer>
+<q_order>1</q_order>
+</answers>
+<answers>
+<c_answer>0</c_answer>
+<answer>owl</answer>
+<q_order>2</q_order>
+</answers>
+<answers>
+<c_answer>0</c_answer>
+<answer>magpie</answer>
+<q_order>3</q_order>
+</answers>
+<answers>
+<c_answer>1</c_answer>
+<answer>pheasanr</answer>
+<q_order>4</q_order>
+</answers>
+</item>
+
+*** Add other items here:
+
+</xml>
+
+
+Explanation of xml:
+ - item consists of the question and answers
+   - type is MC (mutliple choice one answer), MA (multiple choice many ansers), EQ (Math/Chemistry equations),
+     YN (yes/no), TF (true/false), SA (short answer), P (paragraph), MX (matching)
+   - mode (what editor is used to create the question)
+     - 0 Basic editor
+     - 1 Advanced editor
+     - 2 Equation editor
+   - subtype (type of question)
+     - 1 quizzes/tests
+     - 2 surveys
+   - ans_mode (what editor is used to create the answers)
+     - 0 Basic editor
+     - 1 Advanced editor
+     - 2 Equation editor
+   - value (what the question is worth 1 – 99 marks)
+   - descrip (description of the question – max 50 characters)
+   - 
+explanimage_name (name of the image in the explanation – could be more than one of these)
+   - explanimage (base 64 encoded image)
+   - explanation (describe why the answer is correct)- mem_image_name (name of the image in the memory – could be more than one of these)
+   - mem_image (base 64 encoded image)
+   - memory (what you wish to show them before the question is displayed)
+   - 
+qimage_name (name of the image in the question – could be more than one of these)
+   -  qimage (base 64 encoded image)
+   - if there are more than 1 images in the question, there will be multiple
+      <qimage_name><qimage> one after another
+   - question (the actual question)
+   - vlink (video link – only if you used the basic editor to create question)
+   - alink (audio link – only if you used the basic editor to create question)
+   - kolum (how many columns to display answers in 1-3)
+   - answers (one for each answer)
+     - c_answer (1 if correct answer, otherwise 0)
+     - answer (the actual answer)
+     - q_order (the order of the answer)
+   - </item> end of that question and answers
+ *** If you are going to create your own QST XML file, try one question first
+     to see how it goes.- 
+     If there are images in your answer,there will be <ba_image_id_name> <ba_image_id> under the answer if you used the Basic editor.
+     If you used the Advanced editor to create your answers, and there are images in your answers, there will be <adv_ans_image_name> and <adv_ans_image> in your answers.
+     
+**** Replace all “ in your questions and answers with &quot;
